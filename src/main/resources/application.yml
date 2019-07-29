@@ -1,0 +1,18 @@
+spring:
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+snowflake:
+  registry_center:
+    default: zookeeper #目前支持zookeeper和none(单机部署)
+    zookeeper:
+      address: 192.168.17.184:31001 #zookeeper地址 192.168.0.106:2181,192.168.0.107:2181,192.168.0.108:2181
+      retryNum: 10 #重试次数
+      sleepMsBetweenRetries: 5000 #重试间隙
+      config_root: /snowflake-c48d75b2-7fcb-4309-bb3a-87564e081b66 #uuid保证节点不重复
+  max_machine_num: 2048 #最大的机器数
+logging:
+  level:
+    com.yinhai: debug
