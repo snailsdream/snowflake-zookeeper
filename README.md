@@ -1,0 +1,2 @@
+# snowflake-zookeeper
+基于snowflake和zookeeper的分布式id生成器
